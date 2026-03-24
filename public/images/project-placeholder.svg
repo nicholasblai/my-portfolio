@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Project architecture placeholder</title>
+  <desc id="desc">Placeholder image for an engineering project architecture diagram.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="100%" stop-color="#1e2a46"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect x="80" y="100" width="1040" height="475" rx="16" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+  <text x="120" y="170" fill="#e2e8f0" font-size="40" font-family="Inter, Arial, sans-serif" font-weight="700">Architecture Diagram Placeholder</text>
+  <text x="120" y="220" fill="#93c5fd" font-size="26" font-family="Inter, Arial, sans-serif">Replace with your system design image</text>
+  <rect x="140" y="280" width="260" height="160" rx="12" fill="#1d4ed8"/>
+  <rect x="470" y="280" width="260" height="160" rx="12" fill="#0ea5e9"/>
+  <rect x="800" y="280" width="260" height="160" rx="12" fill="#22c55e"/>
+  <text x="178" y="370" fill="white" font-size="26" font-family="Inter, Arial, sans-serif">Source</text>
+  <text x="522" y="370" fill="white" font-size="26" font-family="Inter, Arial, sans-serif">Pipeline</text>
+  <text x="858" y="370" fill="white" font-size="26" font-family="Inter, Arial, sans-serif">Storage</text>
+  <line x1="400" y1="360" x2="470" y2="360" stroke="#94a3b8" stroke-width="6"/>
+  <line x1="730" y1="360" x2="800" y2="360" stroke="#94a3b8" stroke-width="6"/>
+</svg>
