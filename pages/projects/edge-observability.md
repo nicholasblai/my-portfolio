@@ -17,4 +17,3 @@ This is an example project entry showing how to present an engineering case stud
 ![Architecture placeholder](/images/project-placeholder.svg)
 
 Download placeholder design brief: [Project Brief PDF](/docs/project-brief.pdf)
-
