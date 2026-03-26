@@ -3,9 +3,14 @@ const path = require('path')
 const RSS = require('rss')
 const matter = require('gray-matter')
 
+const DEFAULT_SITE_URL = 'https://nicholasblai.vercel.app'
+const SITE_URL = (process.env.SITE_URL || process.env.NEXT_PUBLIC_SITE_URL || DEFAULT_SITE_URL).replace(/\/$/, '')
+
 async function generate() {
   const feed = new RSS({
     title: 'Your Name',
+    site_url: SITE_URL,
+    feed_url: `${SITE_URL}/feed.xml`
     site_url: 'https://nicholasblai.vercel.app',
     feed_url: 'https://nicholasblai.vercel.app/feed.xml'
   })
