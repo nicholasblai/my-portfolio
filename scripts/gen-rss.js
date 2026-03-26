@@ -3,7 +3,7 @@ const path = require('path')
 const RSS = require('rss')
 const matter = require('gray-matter')
 
-const DEFAULT_SITE_URL = 'https://my-portfolio-eight-xi-43.vercel.app'
+const DEFAULT_SITE_URL = 'https://nicholasblai.vercel.app'
 const SITE_URL = (process.env.SITE_URL || process.env.NEXT_PUBLIC_SITE_URL || DEFAULT_SITE_URL).replace(/\/$/, '')
 
 async function generate() {
