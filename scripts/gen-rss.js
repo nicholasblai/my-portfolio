@@ -11,8 +11,6 @@ async function generate() {
     title: 'Your Name',
     site_url: SITE_URL,
     feed_url: `${SITE_URL}/feed.xml`
-    site_url: 'https://nicholasblai.vercel.app',
-    feed_url: 'https://nicholasblai.vercel.app/feed.xml'
   })
 
   const projects = await fs.readdir(path.join(__dirname, '..', 'pages', 'projects'))

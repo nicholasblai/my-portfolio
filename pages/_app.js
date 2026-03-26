@@ -6,7 +6,6 @@ import '../styles/main.css'
 
 const DEFAULT_SITE_URL = 'https://nicholasblai.vercel.app'
 const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || DEFAULT_SITE_URL).replace(/\/$/, '')
-const SITE_URL = 'https://nicholasblai.vercel.app'
 
 export default function Nextra({ Component, pageProps }) {
   const router = useRouter()
