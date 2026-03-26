@@ -3,11 +3,14 @@ const path = require('path')
 const RSS = require('rss')
 const matter = require('gray-matter')
 
+const DEFAULT_SITE_URL = 'https://my-portfolio-eight-xi-43.vercel.app'
+const SITE_URL = (process.env.SITE_URL || process.env.NEXT_PUBLIC_SITE_URL || DEFAULT_SITE_URL).replace(/\/$/, '')
+
 async function generate() {
   const feed = new RSS({
     title: 'Your Name',
-    site_url: 'https://yoursite.com',
-    feed_url: 'https://yoursite.com/feed.xml'
+    site_url: SITE_URL,
+    feed_url: `${SITE_URL}/feed.xml`
   })
 
   const projects = await fs.readdir(path.join(__dirname, '..', 'pages', 'projects'))
