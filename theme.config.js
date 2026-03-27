@@ -1,14 +1,6 @@
 const YEAR = new Date().getFullYear()
 
-const navs = [
-  { url: '/', name: 'Home' },
-  { url: '/about', name: 'About' },
-  { url: '/projects', name: 'Projects' },
-  { url: '/photos', name: 'Photos' }
-]
-
 export default {
-  navs,
   footer: (
     <small style={{ display: 'block', marginTop: '8rem' }}>
       <time>{YEAR}</time> © Nicholas Lai
