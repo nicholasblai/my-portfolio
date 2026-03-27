@@ -69,9 +69,25 @@ img.next-image {
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav-wrap {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
   margin: 1.5rem auto -1rem;
   max-width: min(90vw, 65ch);
   padding: 0 2rem;
+}
+
+.site-nav-title {
+  color: #69778c;
+  font-size: 0.95rem;
+  font-variation-settings: 'wght' 600;
+  line-height: 1.2;
 }
 
 .site-nav-item {
@@ -89,8 +105,8 @@ article > .nx-mb-8.nx-flex.nx-items-center.nx-gap-3 {
 }
 
 @media (max-width: 640px) {
-  .site-nav {
-    justify-content: center;
+  .site-nav-wrap {
+    align-items: center;
     margin-top: 1rem;
     padding: 0 1rem;
   }
