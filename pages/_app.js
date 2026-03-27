@@ -1,11 +1,29 @@
 import 'nextra-theme-blog/style.css'
 import Head from 'next/head'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 import '../styles/main.css'
 
 const DEFAULT_SITE_URL = 'https://nicholasblai.vercel.app'
 const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || DEFAULT_SITE_URL).replace(/\/$/, '')
+
+const NAV_ITEMS = [
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/photos', label: 'Photos' }
+]
+
+const isActiveRoute = (href, asPath) => {
+  const pagePath = asPath.split('?')[0].split('#')[0]
+
+  if (href === '/') {
+    return pagePath === '/'
+  }
+
+  return pagePath === href || pagePath.startsWith(`${href}/`)
+}
 
 export default function Nextra({ Component, pageProps }) {
   const router = useRouter()
@@ -31,6 +49,21 @@ export default function Nextra({ Component, pageProps }) {
           crossOrigin="anonymous"
         />
       </Head>
+      <nav className="site-nav" aria-label="Primary">
+        {NAV_ITEMS.map(({ href, label }) => {
+          const active = isActiveRoute(href, router.asPath)
+
+          return active ? (
+            <span key={href} className="site-nav-item site-nav-item-active">
+              {label}
+            </span>
+          ) : (
+            <Link key={href} href={href} className="site-nav-item">
+              {label}
+            </Link>
+          )
+        })}
+      </nav>
       <Component {...pageProps} />
     </>
   )
