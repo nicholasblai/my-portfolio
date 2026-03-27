@@ -1,18 +1,6 @@
 {
-  "index": {
-    "title": "Home",
-    "href": "/"
-  },
-  "about": {
-    "title": "About",
-    "href": "/about"
-  },
-  "projects": {
-    "title": "Projects",
-    "href": "/projects"
-  },
-  "photos": {
-    "title": "Photos",
-    "href": "/photos"
-  }
+  "index": "Home",
+  "about": "About",
+  "projects": "Projects",
+  "photos": "Photos"
 }
