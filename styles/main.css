@@ -64,12 +64,16 @@ img.next-image {
   color: #69778c;
 }
 
+
+article {
+  padding-top: 0;
+}
 .site-nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 0.75rem;
-  margin: 1.5rem auto -1rem;
+  margin: 5rem auto -1rem;
   max-width: min(90vw, 65ch);
   padding: 0 2rem;
 }
@@ -91,7 +95,7 @@ article > .nx-mb-8.nx-flex.nx-items-center.nx-gap-3 {
 @media (max-width: 640px) {
   .site-nav {
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: 4.5rem;
     padding: 0 1rem;
   }
 }
