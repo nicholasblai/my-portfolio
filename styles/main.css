@@ -73,7 +73,7 @@ article {
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 0.75rem;
-  margin: 5rem auto -1rem;
+  margin: 5rem auto 1.25rem;
   max-width: min(90vw, 65ch);
   padding: 0 2rem;
 }
