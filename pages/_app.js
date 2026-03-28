@@ -29,6 +29,8 @@ export default function Nextra({ Component, pageProps }) {
   const router = useRouter()
   const pagePath = router.asPath.split('?')[0].split('#')[0]
   const canonicalUrl = `${SITE_URL}${pagePath === '/' ? '' : pagePath}`
+  const topLevelPageTitle =
+    NAV_ITEMS.find(({ href }) => href === pagePath)?.label || null
 
   return (
     <>
@@ -49,22 +51,29 @@ export default function Nextra({ Component, pageProps }) {
           crossOrigin="anonymous"
         />
       </Head>
-      <nav className="site-nav" aria-label="Primary">
-        {NAV_ITEMS.map(({ href, label }) => {
-          const active = isActiveRoute(href, router.asPath)
+      <div className="site-nav-wrap">
+        {topLevelPageTitle && (
+          <div className="site-nav-title">{topLevelPageTitle}</div>
+        )}
+        <nav className="site-nav" aria-label="Primary">
+          {NAV_ITEMS.map(({ href, label }) => {
+            const active = isActiveRoute(href, router.asPath)
 
-          return active ? (
-            <span key={href} className="site-nav-item site-nav-item-active">
-              {label}
-            </span>
-          ) : (
-            <Link key={href} href={href} className="site-nav-item">
-              {label}
-            </Link>
-          )
-        })}
-      </nav>
-      <Component {...pageProps} />
+            return active ? (
+              <span key={href} className="site-nav-item site-nav-item-active">
+                {label}
+              </span>
+            ) : (
+              <Link key={href} href={href} className="site-nav-item">
+                {label}
+              </Link>
+            )
+          })}
+        </nav>
+      </div>
+      <div className={topLevelPageTitle ? 'page-content-with-nav-title' : ''}>
+        <Component {...pageProps} />
+      </div>
     </>
   )
 }
